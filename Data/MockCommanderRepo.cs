@@ -3,6 +3,7 @@ using CommanderAPI.Models;
 
 namespace CommanderAPI.Data
 {
+    // used for initial setup and testing, replaced by SqlCommanderRepo
     public class MockCommanderRepo : ICommanderRepo
     {
         public IEnumerable<Command> GetAllCommands()
