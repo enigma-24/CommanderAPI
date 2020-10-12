@@ -6,6 +6,11 @@ namespace CommanderAPI.Data
     // used for initial setup and testing, replaced by SqlCommanderRepo
     public class MockCommanderRepo : ICommanderRepo
     {
+        public void CreateCommand(Command cmd)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<Command> GetAllCommands()
         {
             var commands = new List<Command>{
@@ -20,6 +25,16 @@ namespace CommanderAPI.Data
         public Command GetCommandById(int id)
         {
             return new Command{Id = 0, HowTo = "Copy Line above", Line = "Press Ctrl + C", Platform = "Windows"};
+        }
+
+        public bool SaveChanges()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void UpdateCommand(Command cmd)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
